@@ -1,0 +1,19 @@
+{
+  "name": "scss_tomorrow_house",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass styles/main.scss style.css",
+    "compile:sass": "sass ./styles/main.scss ./style.css",
+    "watch:sass": "sass -w ./styles/main.scss:./style.css",
+    "lint:scss": "stylelint './styles/main.scss'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.81.0"
+  }
+}
