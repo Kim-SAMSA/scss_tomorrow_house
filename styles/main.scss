@@ -1,5 +1,9 @@
+@use "./constants/typography";
 @use "./constants/colors";
 
 @use "./base/fonts";
 @use "./base/nomalize";
-@use "./base/reset";
+
+@use "./reset";
+
+@use "./layouts/grids";
