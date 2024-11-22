@@ -1,0 +1,84 @@
+//
+//  mobile (<768px) =========================
+// fixture -------------------------- sm
+// # of columns --------------------- 4
+// gutter --------------------------- 20px
+// margin --------------------------- 5px
+// container-size ------------- 100% -(5px*2)
+
+//  tablet (>768px) =========================
+// fixture -------------------------- md
+// # of columns --------------------- 12
+// gutter --------------------------- 10px
+// margin --------------------------- 30px
+// container-size ------------ 100% -(30px*2)
+// max-container-sixw -------- 960 px
+
+//  DESKTOP (>1200px) =======================
+//  fixture ------------------------- lg
+// # of columns --------------------- 12
+// gutter --------------------------- 20px
+// unit ----------------------------- 75px
+// margin --------------------------- auto
+// container-size ------------ 1140 px
+// max-container-sixw -------- 1140 px
+
+@use "./layouts/responsive";
+@use "sass:list";
+@use "sass:math";
+
+$gutter: 20px;
+
+$sm-columns: 4;
+$sm-margin: 5px;
+
+$md-columns: 12;
+$md-margin: 30px;
+$md-max-container: 960px + $md-margin * 2;
+
+$lg-columns: 12;
+$lg-unit: 75px;
+$lg-max-container: ($lg-unit + $gutter) * $lg-columns;
+
+.container {
+  width: 100%;
+  padding: 0 $sm-margin;
+  margin: 0 auto;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  [class^="col-"] {
+    padding: 0 math.div($gutter, 2);
+  }
+
+  @for $i from 1 through $sm-columns {
+    .col-sm-#{$i} {
+      width: math.div($i, $sm-columns) * 100%;
+    }
+  }
+
+  @include responsive.responsive(T) {
+    max-width: $md-max-container;
+    padding: 0 $md-margin;
+  }
+
+  @for $i from 1 through $md-columns {
+    .col-md-#{$i} {
+      width: math.div($i, $md-columns) * 100%;
+    }
+  }
+
+  @include responsive.responsive(D) {
+    max-width: $lg-max-container;
+    padding: 0;
+  }
+
+  @for $i from 1 through $lg-columns {
+    .col-lg-#{$i} {
+      width: ($lg-unit + $gutter) * $i;
+    }
+  }
+}
