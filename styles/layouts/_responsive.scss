@@ -1,0 +1,15 @@
+@use "./breakpoint";
+
+@mixin responsive($screen) {
+  @if ($screen == "T") {
+    @media screen and (min-width: breakpoint.$md-breakpoint) {
+      @content;
+    }
+  }
+
+  @if ($screen == "D") {
+    @media screen and (min-width: breakpoint.$lg-breakpoint) {
+      @content;
+    }
+  }
+}
