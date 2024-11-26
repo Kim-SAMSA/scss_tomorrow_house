@@ -1,0 +1,51 @@
+@use "./layouts/breakpoint" as *;
+@use "./layouts/responsive" as *;
+
+.visually-hidden {
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.sm-only {
+  @include responsive(T) {
+    display: none !important;
+  }
+}
+
+.md-only {
+  @include responsive(T) {
+    display: none !important;
+  }
+  @include responsive(D) {
+    display: none !important;
+  }
+}
+
+.lg-only {
+  @include responsive(D) {
+    display: none !important;
+  }
+}
+
+.sm-hidden {
+  @media screen and (max-width: ($md-breakpoint - 1)) {
+    display: none !important;
+  }
+}
+
+.md-hidden {
+  @media screen and (min-width: $md-breakpoint),
+    (max-width: ($lg-breakpoint -1)) {
+  }
+}
+
+.lg-hidden {
+  @media screen and (min-width: ($lg-breakpoint)) {
+    display: none !important;
+  }
+}
