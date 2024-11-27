@@ -1,27 +1,28 @@
-@use './constants/typography';
-@use './constants/colors';
-
-@use './text-file';
+@use './reset';
+@use './globals';
 
 @use './base/fonts';
 @use './base/nomalize';
 
-@use './positions';
-@use './flexbox';
+@use './constants/typography';
+@use './constants/colors';
 
-@use './reset';
+@use './mixins/text-style';
+@use './mixins/responsive';
+@use './mixins/positions';
+@use './mixins/flexbox';
 
 @use './layouts/breakpoint';
-@use './layouts/responsive';
+@use './layouts/grids';
+@use './layouts/gnb';
 
-@use './grids';
-@use './globals';
+@use './component/gnb-nav';
 
-@use './tags';
-@use './avatars';
-@use './star-ratings';
-@use './prices';
-@use './buttons';
-@use './forms';
-@use './pagination';
-@use './gnb';
+@use './modules/tags';
+@use './modules/avatars';
+@use './modules/star-ratings';
+@use './modules/prices';
+@use './modules/buttons';
+@use './modules/forms';
+@use './modules/pagination';
+@use './modules/icons';
