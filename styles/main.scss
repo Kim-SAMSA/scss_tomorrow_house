@@ -1,26 +1,27 @@
-@use "./constants/typography";
-@use "./constants/colors";
+@use './constants/typography';
+@use './constants/colors';
 
-@use "./text-file";
+@use './text-file';
 
-@use "./base/fonts";
-@use "./base/nomalize";
+@use './base/fonts';
+@use './base/nomalize';
 
-@use "./positions";
-@use "./flexbox";
+@use './positions';
+@use './flexbox';
 
-@use "./reset";
+@use './reset';
 
-@use "./layouts/breakpoint";
-@use "./layouts/responsive";
+@use './layouts/breakpoint';
+@use './layouts/responsive';
 
-@use "./grids";
-@use "./globals";
+@use './grids';
+@use './globals';
 
-@use "./tags";
-@use "./avatars";
-@use "./star-ratings";
-@use "./prices";
-@use "./buttons";
-@use "./forms";
-@use "./pagination";
+@use './tags';
+@use './avatars';
+@use './star-ratings';
+@use './prices';
+@use './buttons';
+@use './forms';
+@use './pagination';
+@use './gnb';
