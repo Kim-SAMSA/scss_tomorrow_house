@@ -1,16 +1,20 @@
+@use 'sass:math';
 @use '../constants/colors' as *;
 @use '../constants/typography' as *;
 
 @use '../mixins/flexbox' as *;
+@use '../mixins/responsive' as *;
 
 .gnb-icon-button {
+  $badge-size: 16px;
   @include flexbox;
-
+  position: relative;
   width: 32px;
   height: 32px;
   font-size: 24px;
+  border-radius: 50%;
   color: $secondary;
-  transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 
   &.is-menu {
     color: $blue;
@@ -20,7 +24,39 @@
     }
   }
 
+  &.is-cart {
+    i {
+      position: relative;
+      top: 1px;
+      right: -1px;
+    }
+  }
+
   &:active {
     color: $primary;
+  }
+
+  .badge {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    min-width: $badge-size;
+    height: $badge-size;
+    padding: 0 4px;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: $white;
+    text-align: center;
+    border-radius: math.div($badge-size, 2);
+    background-color: $red;
+  }
+
+  @include responsive(T) {
+    &:hover {
+      color: $white !important;
+      background-color: $blue;
+    }
   }
 }
