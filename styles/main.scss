@@ -13,10 +13,6 @@
 @use './mixins/flexbox';
 
 @use './layouts/breakpoint';
-@use './layouts/grids';
-@use './layouts/gnb';
-
-@use './component/gnb-nav';
 
 @use './modules/tags';
 @use './modules/avatars';
@@ -26,3 +22,8 @@
 @use './modules/forms';
 @use './modules/pagination';
 @use './modules/icons';
+
+@use './component/gnb-nav';
+
+@use './layouts/grids';
+@use './layouts/gnb';
