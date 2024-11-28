@@ -6,6 +6,7 @@
 
 @use './constants/typography';
 @use './constants/colors';
+@use './constants/box-shadows';
 
 @use './mixins/text-style';
 @use './mixins/responsive';
@@ -25,6 +26,7 @@
 
 @use './component/gnb-nav';
 @use './component/gnb-icon-buttons';
+@use './component/mt-menu';
 
 @use './layouts/grids';
 @use './layouts/gnb';
