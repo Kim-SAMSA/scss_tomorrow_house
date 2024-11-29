@@ -6,18 +6,43 @@
 @use '../constants/box-shadows' as *;
 
 .my-menu {
+  $button-size: 32px;
   $tooltip-size: 12px;
+
   position: relative;
+
+  &-button {
+    width: $button-size;
+    height: $button-size;
+    overflow: hidden;
+    border: 3px solid $white;
+    border-radius: 50%;
+    transition: border-color 200ms ease-in-out;
+
+    &:hover,
+    &.is-active {
+      border-color: $blue;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
   &-content {
     @include pos-center-x;
+    top: $button-size + $tooltip-size + 8px;
+    position: absolute;
     box-shadow: $dropdown-shadow;
     border-radius: 4px;
 
     &::before,
     &::after {
       @include pos-center-x;
-      display: block !important;
+      display: block;
       top: -#{$tooltip-size * 2};
       width: 0;
       height: 0;
