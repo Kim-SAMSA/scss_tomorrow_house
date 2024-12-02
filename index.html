@@ -180,9 +180,7 @@
             <div class="avatar-24">
               <img src="./assets/images/img-user-01.jpg" alt="사달라아저씨" />
             </div>
-            <strong class="username"
-              >아너무졸려뭔가맛있는음식먹고싶은데우짜지</strong
-            >
+            <strong class="username">사달라</strong>
           </a>
         </div>
       </header>
@@ -190,7 +188,26 @@
       <nav class="sidebar-nav">
         <h2 class="visually-hidden">메뉴</h2>
 
-        <div class="drawer-menu">
+        <div class="drawer-menu is-community">
+          <button type="button" class="drawer-menu-button">
+            <i class="ic-community" aria-hidden></i>
+            커뮤니티
+            <i class="ic-chevron" aria-hidden></i>
+          </button>
+          <div class="drawer-menu-content">
+            <ul class="drawer-menu-list">
+              <li class="drawer-menu-item"><a href="/">홈</a></li>
+              <li class="drawer-menu-item"><a href="/">집들이</a></li>
+              <li class="drawer-menu-item"><a href="/">노하우</a></li>
+              <li class="drawer-menu-item"><a href="/">전문가집들이</a></li>
+              <li class="drawer-menu-item"><a href="/">셀프가이드</a></li>
+              <li class="drawer-menu-item"><a href="/">질문과답변</a></li>
+              <li class="drawer-menu-item"><a href="/">이벤트</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="drawer-menu is-store is-active is-open">
           <button type="button" class="drawer-menu-button">
             <i class="ic-store" aria-hidden></i>
             스토어
@@ -199,17 +216,38 @@
 
           <div class="drawer-menu-content">
             <ul class="drawer-menu-list">
-              <li class="drawer-menu-item"><a href="/">스토어</a></li>
+              <li class="drawer-menu-item"><a href="/">스토어홈</a></li>
               <li class="drawer-menu-item"><a href="/">카테고리</a></li>
               <li class="drawer-menu-item"><a href="/">신혼가구</a></li>
-              <li class="drawer-menu-item">
-                <a href="/" lang="en" aria-label="New">기획전</a>
-                <i class="ic-new"></i>
+              <li class="drawer-menu-item"><a href="/">베스트</a></li>
+              <li class="drawer-menu-item"><a href="/">오늘의딜</a></li>
+              <li class="drawer-menu-item"><a href="/">연휴특가</a></li>
+              <li class="drawer-menu-item"><a href="/">월동준비</a></li>
+              <li class="drawer-menu-item"><a href="/">리퍼마켓</a></li>
+              <li class="drawer-menu-item is-active">
+                <a href="/" lang="en" aria-label="New"
+                  >기획전
+                  <i class="ic-new"></i>
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
+        <div class="drawer-menu is-expert">
+          <button type="button" class="drawer-menu-button">
+            <i class="ic-expert" aria-hidden></i>
+            인테리어시공
+            <i class="ic-chevron" aria-hidden></i>
+          </button>
+
+          <div class="drawer-menu-content">
+            <ul class="drawer-menu-list">
+              <li class="drawer-menu-item"><a href="/">시공홈</a></li>
+              <li class="drawer-menu-item"><a href="/">시공스토어</a></li>
+            </ul>
+          </div>
+        </div>
         <!-- NOTE: 로그인을 한 경우 -->
 
         <div class="sidebar-user-menu">
