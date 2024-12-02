@@ -7,6 +7,7 @@
 @use './constants/typography';
 @use './constants/colors';
 @use './constants/box-shadows';
+@use './constants/z-indexes';
 
 @use './mixins/text-style';
 @use './mixins/responsive';
@@ -32,3 +33,4 @@
 @use './layouts/grids';
 @use './layouts/gnb';
 @use './layouts/sidebar';
+@use './layouts/overlay';
