@@ -14,8 +14,6 @@
 @use './mixins/positions';
 @use './mixins/flexbox';
 
-@use './layouts/breakpoint';
-
 @use './modules/tags';
 @use './modules/avatars';
 @use './modules/star-ratings';
@@ -30,7 +28,9 @@
 @use './component/mt-menu';
 @use './component/drawer-menu';
 
+@use './layouts/breakpoint';
 @use './layouts/grids';
 @use './layouts/gnb';
 @use './layouts/sidebar';
 @use './layouts/overlay';
+@use './layouts/search-modal';
