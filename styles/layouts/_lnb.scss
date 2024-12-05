@@ -6,6 +6,7 @@
 @use '../mixins/text-style' as *;
 @use '../mixins/flexbox' as *;
 @use '../mixins/text-style' as *;
+@use '../mixins/scrollbar' as *;
 
 @use 'sass:math';
 
@@ -13,11 +14,8 @@
   $lnb-link-padding: 8px;
   $grid-margin: $sm-margin + math.div($gutter, 2);
 
+  @include no-scrollbar;
   overflow-x: auto;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 
   &-list {
     @include inline-flexbox(start);
