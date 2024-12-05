@@ -1,3 +1,5 @@
+@use '../constants/colors' as *;
+
 .ic-bell:before {
   content: '\e900';
 }
@@ -35,6 +37,7 @@
   content: '\e90b';
 }
 .ic-new:before {
+  color: $red;
   content: '\e90c';
 }
 .ic-search:before {
