@@ -1,4 +1,5 @@
 @use '../constants/dimensions' as *;
+@use '../constants/z-indexes' as *;
 
 @use '../mixins/responsive' as *;
 
@@ -15,10 +16,12 @@
 
   .gnb {
     top: 0;
+    z-index: $gnb-level;
   }
 
   .lnb {
     top: $gnb-height-sm;
+    z-index: $lnb-level;
   }
 
   @include responsive(T) {
