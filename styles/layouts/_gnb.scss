@@ -1,6 +1,7 @@
 @use '../constants/colors' as *;
 @use '../constants/typography' as *;
 @use '../constants/box-shadows' as *;
+@use '../constants/dimensions' as *;
 
 @use '../mixins/positions' as *;
 @use '../mixins/flexbox' as *;
@@ -10,10 +11,11 @@
 .gnb {
   position: relative;
   border-bottom: 1px solid $border;
+  background-color: $white;
 
   &-wrapper {
     @include flexbox(between);
-    height: 50px;
+    height: $gnb-height-sm - 0.8px;
   }
 
   &-right {
@@ -43,6 +45,9 @@
   // Tablet
 
   @include responsive(T) {
+    &-wrapper {
+      height: $gnb-height-md;
+    }
     &-left {
       @include flexbox(start);
     }
