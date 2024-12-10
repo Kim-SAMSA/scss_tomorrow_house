@@ -9,47 +9,45 @@
 @use 'sass:math';
 
 .product-carousel {
+  position: relative;
+
   &-slider {
     margin-left: -($sm-margin + math.div($gutter, 2));
     margin-right: -($sm-margin + math.div($gutter, 2));
   }
 
-  position: relative;
-
   &-thumbnail {
     @include pos-center-x;
     bottom: 16px;
+  }
 
-    .thumbnail {
-      &-list {
-        @include flexbox;
+  .thumbnail-list {
+    @include flexbox;
+  }
+
+  .thumbnail-item {
+    @include flexbox;
+    margin: 0 4px;
+
+    &.tns-nav-active {
+      button {
+        transform: scale(1.3333333);
+        background-color: $white;
+        opacity: 1;
       }
+    }
 
-      &-item {
-        @include flexbox;
-        margin: 0 4px;
+    button {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $white;
+      opacity: 0.7;
+      transition: transform 100ms ease-in-out, opacity 100ms ease-in-out;
+    }
 
-        &.tns-nav-active {
-          button {
-            transform: scale(1.3333333);
-            background-color: $white;
-            opacity: 1;
-          }
-        }
-
-        button {
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background-color: $white;
-          opacity: 0.7;
-          transition: transform 100ms ease-in-out, opacity 100ms ease-in-out;
-        }
-
-        img {
-          display: none;
-        }
-      }
+    img {
+      display: none;
     }
   }
 
