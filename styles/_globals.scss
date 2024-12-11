@@ -1,5 +1,7 @@
-@use "./layouts/breakpoint" as *;
-@use "./layouts/responsive" as *;
+@use './layouts/breakpoint' as *;
+@use './mixins/responsive' as *;
+
+@use 'sass:math';
 
 .visually-hidden {
   width: 1px !important;
@@ -9,38 +11,41 @@
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+  color: transparent;
 }
 
 .sm-only {
-  @include responsive(T) {
+  @media screen and (min-width: $md-breakpoint) {
     display: none !important;
   }
 }
 
 .md-only {
-  @include responsive(T) {
+  @media screen and (max-width: math.div($md-breakpoint - 1, 1)) {
     display: none !important;
   }
-  @include responsive(D) {
+
+  @media screen and (min-width: $lg-breakpoint) {
     display: none !important;
   }
 }
 
 .lg-only {
-  @include responsive(D) {
+  @media screen and (max-width: math.div($lg-breakpoint - 1, 1)) {
     display: none !important;
   }
 }
 
 .sm-hidden {
-  @media screen and (max-width: ($md-breakpoint - 1)) {
+  @media screen and (max-width: math.div($md-breakpoint - 1, 1)) {
     display: none !important;
   }
 }
 
 .md-hidden {
   @media screen and (min-width: $md-breakpoint),
-    (max-width: ($lg-breakpoint -1)) {
+    (max-width: math.div($lg-breakpoint - 1, 1)) {
+    display: none !important;
   }
 }
 
