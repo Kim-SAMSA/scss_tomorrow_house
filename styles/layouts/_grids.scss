@@ -111,6 +111,15 @@ $lg-max-container: 1140px;
   margin: 0 auto;
   padding: 0 $sm-margin;
 
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  [class^='col-'] {
+    padding: 0 math.div($gutter, 2);
+  }
+
   // Mobile 기본 그리드
   @include generate-columns(sm, $sm-columns);
 
