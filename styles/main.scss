@@ -15,6 +15,7 @@
 @use './mixins/positions';
 @use './mixins/flexbox';
 @use './mixins/scrollbar';
+@use './mixins/star-rating';
 
 @use './modules/tags';
 @use './modules/avatars';
@@ -32,6 +33,7 @@
 @use './component/search-history';
 @use './component/breadcrumb';
 @use './component/product-carousel';
+@use './component/product-info';
 
 @use './layouts/breakpoint';
 @use './layouts/grids';

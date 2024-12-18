@@ -1,0 +1,16 @@
+@use '../mixins/flexbox' as *;
+@use '../constants/colors' as *;
+@use '../constants/typography' as *;
+
+@mixin star-rating($size) {
+  @include flexbox(start);
+  font-size: $size;
+
+  .ic-star {
+    color: $border;
+
+    &.is-active {
+      color: $blue;
+    }
+  }
+}
