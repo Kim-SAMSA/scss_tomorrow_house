@@ -38,7 +38,7 @@
                     </a>
                   </h1>
 
-                  <nav class="sm-hidden">
+                  <nav class="gnb-nav sm-hidden">
                     <h2 class="visually-hidden">메뉴</h2>
                     <ul class="gnb-nav-list">
                       <li class="gnb-nav-item"><a href="/">커뮤니티</a></li>
@@ -57,6 +57,7 @@
                     <i class="ic-menu"></i>
                   </button>
                 </div>
+
                 <div class="gnb-right">
                   <div class="gnb-search lg-only">
                     <div class="input-group">
@@ -67,7 +68,8 @@
                         placeholder="스토어 검색"
                       />
                     </div>
-                    <section class="search-history is-active">
+
+                    <section class="search-history">
                       <header class="search-history-header">
                         <h2 class="title">최근 검색어</h2>
                         <button type="button">전체 삭제</button>
@@ -81,8 +83,12 @@
                             <button type="button" class="word-button">
                               김버그
                             </button>
-                            <button type="button" class="delete-button">
-                              <i class="ic-close" aria-label="검색어 삭제"></i>
+                            <button
+                              type="button"
+                              class="delete-button"
+                              aria-label="검색어 삭제"
+                            >
+                              <i class="ic-close"></i>
                             </button>
                           </li>
                           <li class="search-history-item">
@@ -103,29 +109,6 @@
                       </div>
                     </section>
                   </div>
-
-                  <!-- NOTE: 로그인을 하지 않은 경우 -->
-
-                  <!-- <div class="button-group">
-                <button
-                  class="gnb-icon-button is-search lg-hidden"
-                  type="button"
-                  aria-label="검색창 열기 버튼"
-                >
-                  <i class="ic-search"></i>
-                </button>
-                <a
-                  class="gnb-icon-button is-cart"
-                  href="/"
-                  aria-label="장바구니 페이지로 이동"
-                >
-                  <i class="ic-cart"></i>
-                </a>
-                <div class="gnb-auth sm-hidden">
-                  <a href="/">로그인</a>
-                  <a href="/">회원가입</a>
-                </div>
-              </div> -->
 
                   <!-- NOTE: 로그인을 한 경우 -->
 
@@ -164,7 +147,7 @@
 
                     <div class="my-menu sm-hidden">
                       <button
-                        class="my-menu-button is-active"
+                        class="my-menu-button"
                         type="button"
                         aria-label="마이메뉴 열기 버튼"
                       >
@@ -190,6 +173,29 @@
                       </div>
                     </div>
                   </div>
+
+                  <!-- NOTE: 로그인을 하지 않은 경우 -->
+
+                  <!-- <div class="button-group">
+                <button
+                  class="gnb-icon-button is-search lg-hidden"
+                  type="button"
+                  aria-label="검색창 열기 버튼"
+                >
+                  <i class="ic-search"></i>
+                </button>
+                <a
+                  class="gnb-icon-button is-cart"
+                  href="/"
+                  aria-label="장바구니 페이지로 이동"
+                >
+                  <i class="ic-cart"></i>
+                </a>
+                <div class="gnb-auth sm-hidden">
+                  <a href="/">로그인</a>
+                  <a href="/">회원가입</a>
+                </div>
+              </div> -->
 
                   <button class="btn-primary btn-40 sm-hidden" type="button">
                     글쓰기
@@ -356,6 +362,100 @@
                 </ol>
               </div>
             </div>
+          </div>
+
+          <div class="col-sm-4 col-md-6 col-lg-5">
+            <section class="product-info">
+              <header class="product-info-header">
+                <a href="/" class="info-brand">보아르</a>
+                <h1 class="info-title">
+                  캠핑/가정용 400W 미니멀 전기히터 VO-HT015 (안전장치기능탑재)
+                </h1>
+                <div class="info-review">
+                  <div class="star-rating-13">
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                  </div>
+
+                  <p>
+                    <strong>566</strong>
+                    <span class="sm-hidden">개 리뷰</span>
+                  </p>
+                </div>
+              </header>
+
+              <!-- original mark-up -->
+
+              <div class="product-info-price">
+                <div class="info-original-price">
+                  <div class="discount-rate">
+                    <span class="rate">34</span>
+
+                    <!-- self-mark-up -->
+                    <!-- <strong>34</strong> -->
+
+                    <span class="percent">%</span>
+                  </div>
+
+                  <div class="price-off">
+                    <strong class="amount">49,900</strong>
+                    <span class="currency sm-hidden">원</span>
+                  </div>
+                </div>
+
+                <div class="info-sale-price">
+                  <div class="price-20">
+                    <strong class="amount">32,900</strong>
+                    <span class="currency">원</span>
+                  </div>
+
+                  <strong class="tag-red"> 특가 </strong>
+                </div>
+
+                <!-- self practice -->
+
+                <!-- <div class="product-info-price">
+                <div class="info-original-price">
+                  <div class="discount-rate">
+                    <strong>34</strong>
+                    <span>%</span>
+                  </div>
+                  <div class="price-off sm-only">
+                    <strong class="amount">49,900</strong>
+                    <span class="currency">원</span>
+                  </div>
+                </div>
+
+                <div class="info-sale-price">
+                  <div class="price-off sm-hidden">
+                    <strong class="amount">49,900</strong>
+                    <span class="currency">원</span>
+                  </div>
+
+                  <div class="origin-price">
+                    <div class="price-20">
+                      <strong class="amount">32,900</strong>
+                      <span class="currency">원</span>
+                    </div>
+                    <strong class="tag-red"> 특가 </strong>
+                  </div>
+                </div>
+              </div> -->
+
+                <p class="info-point">
+                  <strong>987P</strong>
+                  적립해드립니다. (VIP 3배 혜택 적용됨)
+                </p>
+              </div>
+
+              <div class="product-info-delivery">
+                <span>일반택배</span>
+                <strong class="tag-gray"> 무료배송 </strong>
+              </div>
+            </section>
           </div>
         </div>
       </div>
