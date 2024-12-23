@@ -170,4 +170,8 @@
       }
     }
   }
+
+  @include responsive(D) {
+    margin-bottom: 20px;
+  }
 }
