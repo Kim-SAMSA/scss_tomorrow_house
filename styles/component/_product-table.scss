@@ -1,0 +1,47 @@
+@use '../constants/colors' as *;
+
+@use '../mixins/text-style' as *;
+@use '../mixins/responsive' as *;
+
+.product-table {
+  $table-padding: 12px;
+  $table-th-width-sm: 100px;
+  $table-th-width-md: 152px;
+
+  // table을 할경우 table-layout: fixed  border-collapse: collapse는 필수
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  tr {
+    @include text-style(12, $primary);
+    text-align: left;
+    border-bottom: 1px solid $border;
+    vertical-align: top;
+  }
+
+  th,
+  td {
+    //   border: 1px solid black;
+    padding: $table-padding;
+  }
+
+  th {
+    width: $table-th-width-sm + $table-padding;
+    font-weight: 400;
+    color: $secondary;
+  }
+
+  td {
+    padding-left: 0;
+  }
+
+  @include responsive(T) {
+    tr {
+      @include text-style(14, $primary);
+    }
+
+    th {
+      width: $table-th-width-md + $table-padding;
+    }
+  }
+}
