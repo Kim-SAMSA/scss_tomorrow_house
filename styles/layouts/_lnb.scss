@@ -1,7 +1,6 @@
 @use '../constants/colors' as *;
 @use '../constants/z-indexes' as *;
-
-@use '../layouts/grids' as *;
+@use '../constants/grid' as *;
 
 @use '../mixins/text-style' as *;
 @use '../mixins/flexbox' as *;
@@ -15,7 +14,6 @@
   $lnb-height-sm: 40px;
   $lnb-height-md: 50px;
   $lnb-link-padding: 8px;
-  $grid-margin: $sm-margin + math.div($gutter, 2);
 
   @include no-scrollbar;
   overflow-x: auto;

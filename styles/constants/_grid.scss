@@ -1,0 +1,15 @@
+@use 'sass:math';
+
+$gutter: 20px;
+
+$sm-columns: 4;
+$sm-margin: 5px;
+
+$md-columns: 12;
+$md-margin: 30px;
+$md-max-container: 960px;
+
+$lg-columns: 12;
+$lg-max-container: 1140px;
+
+$grid-margin: $sm-margin + math.div($gutter, 2);

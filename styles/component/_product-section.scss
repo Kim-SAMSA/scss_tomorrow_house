@@ -1,11 +1,12 @@
 @use '../constants/colors' as *;
+@use '../constants/grid' as *;
 
 .product-section {
   padding-bottom: 20px;
 
   &-divider {
     height: 8px;
-    margin: 0 -15px;
+    margin: 0 (-$grid-margin);
     // TODO: grid constants로 빼기
     background-color: $border;
   }

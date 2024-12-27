@@ -1,19 +1,16 @@
 @use '../constants/colors' as *;
-
-@use '../layouts/grids' as *;
+@use '../constants/grid' as *;
 
 @use '../mixins/flexbox' as *;
 @use '../mixins/positions' as *;
 @use '../mixins/responsive' as *;
 
-@use 'sass:math';
-
 .product-carousel {
   position: relative;
 
   &-slider {
-    margin-left: -($sm-margin + math.div($gutter, 2));
-    margin-right: -($sm-margin + math.div($gutter, 2));
+    margin-left: -$grid-margin;
+    margin-right: -$grid-margin;
   }
 
   &-thumbnail {

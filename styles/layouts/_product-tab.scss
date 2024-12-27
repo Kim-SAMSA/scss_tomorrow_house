@@ -1,8 +1,7 @@
 @use '../constants/colors' as *;
 @use '../constants/dimensions' as *;
 @use '../constants/z-indexes' as *;
-
-@use '../layouts/grids' as *;
+@use '../constants/grid' as *;
 
 @use '../mixins/text-style' as *;
 @use '../mixins/flexbox' as *;
@@ -12,8 +11,6 @@
 @use 'sass:math';
 
 .product-tab {
-  $grid-margin: math.div($sm-margin + $gutter, 2);
-
   position: sticky;
   top: ($gnb-height-sm + $lnb-height-sm) - 2px;
   z-index: $product-tab-level;
