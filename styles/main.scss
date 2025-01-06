@@ -41,6 +41,8 @@
 @use './component/product-section-header';
 @use './component/product-table';
 @use './component/product-spec';
+@use './component/review-scoreboard';
+@use './component/score-stats';
 
 @use './layouts/breakpoint';
 @use './layouts/grids';
