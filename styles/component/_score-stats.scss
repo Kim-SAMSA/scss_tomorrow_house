@@ -37,6 +37,7 @@
       .bar-graph {
         width: 70px;
         height: 5px;
+        overflow: hidden;
         margin-right: 4px;
         border-radius: 10px;
         background-color: $border;
@@ -44,9 +45,10 @@
         .active-bar {
           width: 0;
           height: 5px;
-          overflow: hidden;
           border-radius: 10px;
           background-color: $blue;
+          animation-name: slide-active-bar;
+          animation-duration: 1000ms;
         }
       }
 
@@ -69,5 +71,15 @@
         }
       }
     }
+  }
+}
+
+@keyframes slide-active-bar {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
   }
 }
