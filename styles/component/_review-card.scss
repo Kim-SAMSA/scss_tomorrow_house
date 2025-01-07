@@ -7,10 +7,6 @@
 .review-card {
   padding: 20px 0;
 
-  &:last-child {
-    padding-bottom: 0;
-  }
-
   &-header {
     @include flexbox(start);
     margin-bottom: 20px;
