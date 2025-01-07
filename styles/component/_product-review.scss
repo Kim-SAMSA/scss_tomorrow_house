@@ -1,0 +1,11 @@
+@use '../constants/colors' as *;
+
+.product-review {
+  .review-item {
+    border-bottom: 1px solid $border;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
