@@ -1,0 +1,91 @@
+@use '../constants/colors' as *;
+
+@use '../mixins/text-style' as *;
+@use '../mixins/flexbox' as *;
+@use '../mixins/positions' as *;
+@use '../mixins/responsive' as *;
+
+.inquiry-card {
+  padding-bottom: 40px;
+
+  &-header {
+    @include text-style(12);
+    margin-bottom: 8px;
+
+    .detail,
+    .misc {
+      @include flexbox(start);
+
+      dd,
+      strong {
+        &::after {
+          content: '｜';
+        }
+      }
+    }
+
+    .detail {
+      color: $primary;
+      margin-bottom: 8px;
+
+      dd {
+        &:last-child::after {
+          content: '';
+        }
+      }
+    }
+
+    .misc {
+      color: $tertiary;
+
+      strong {
+        font-weight: 400;
+
+        &::after {
+          content: '｜';
+        }
+      }
+    }
+  }
+
+  &-body {
+    @include text-style(13);
+
+    .question-content {
+      position: relative;
+      padding-left: 20px;
+
+      span {
+        position: absolute;
+        color: $blue;
+        top: 0;
+        left: 0;
+        font-weight: 700;
+        margin-right: 7px;
+      }
+
+      p {
+        color: $primary;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    &-header {
+      .misc {
+        margin-bottom: 20px;
+      }
+    }
+    &-body {
+      @include text-style(14);
+
+      .question-content {
+        padding-left: 24px;
+
+        span {
+          @include text-style(16);
+        }
+      }
+    }
+  }
+}
