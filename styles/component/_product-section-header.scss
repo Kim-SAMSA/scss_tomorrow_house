@@ -8,10 +8,7 @@
 
 .product-section-header {
   position: relative;
-  margin-bottom: 20px;
-}
 
-.product-section-header {
   @include flexbox(start);
   width: 100%;
   height: 64px;
