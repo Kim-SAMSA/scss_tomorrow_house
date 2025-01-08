@@ -65,7 +65,14 @@
       }
 
       p {
+        @include flexbox(start);
         color: $primary;
+
+        i {
+          margin-right: 8px;
+          color: $tertiary;
+          font-size: 16px;
+        }
       }
     }
   }
