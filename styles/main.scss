@@ -18,6 +18,7 @@
 @use './mixins/scrollbar';
 @use './mixins/star-rating';
 @use './mixins/line-clamp';
+@use './mixins/truncate';
 
 @use './modules/tags';
 @use './modules/avatars';
@@ -51,6 +52,7 @@
 @use './component/product-shipment';
 @use './component/product-card';
 @use './component/product-recommendation';
+@use './component/gallery-card';
 
 @use './layouts/breakpoint';
 @use './layouts/grids';
