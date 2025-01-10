@@ -3,6 +3,7 @@
 @use '../mixins/text-style' as *;
 @use '../mixins/flexbox' as *;
 @use '../mixins/truncate' as *;
+@use '../mixins/positions' as *;
 
 .gallery-card {
   position: relative;
@@ -10,10 +11,17 @@
   overflow: hidden;
 
   &-image {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+
     img {
+      @include pos-center;
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
