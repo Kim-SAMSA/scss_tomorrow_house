@@ -4,6 +4,7 @@
 @use '../mixins/flexbox' as *;
 @use '../mixins/positions' as *;
 @use '../mixins/responsive' as *;
+@use '../mixins/line-clamp' as *;
 
 .product-card {
   &-image {
@@ -35,6 +36,7 @@
 
   &-title {
     @include text-style(13, $dark);
+    @include line-clamp(2);
     font-weight: 400;
     line-height: 16px;
   }
