@@ -17,6 +17,7 @@
 @use './mixins/flexbox';
 @use './mixins/scrollbar';
 @use './mixins/star-rating';
+@use './mixins/line-clamp';
 
 @use './modules/tags';
 @use './modules/avatars';
