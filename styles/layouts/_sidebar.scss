@@ -6,6 +6,7 @@
 @use '../mixins/flexbox' as *;
 @use '../mixins/text-style' as *;
 @use '../mixins/scrollbar' as *;
+@use '../mixins/truncate' as *;
 
 .sidebar {
   $sidebar-width: 240px;
@@ -69,10 +70,9 @@
     }
 
     .username {
+      @include truncate;
+
       flex-grow: 1;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
   }
 
