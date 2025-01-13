@@ -4,8 +4,6 @@
 @use '../mixins/flexbox' as *;
 
 .order-form {
-  margin-bottom: 40px;
-
   .order-inputs,
   .order-checkout,
   .order-summary {
