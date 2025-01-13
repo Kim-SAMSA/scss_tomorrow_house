@@ -11,11 +11,14 @@ const productCarousel = tns({
   preventScrollOnTouch: true,
 })
 
-const userGallery = tns({
+const userGallerDesktop = tns({
   container: '.user-gallery .slider-list',
   gutter: 4,
   edgePadding: 16,
   controls: false,
+  controlsContainer: '.user-gallery .user-gallery-controls',
+  navContainer: '.user-gallery .thumbnail-list',
+  navAsThumbnails: true,
   loop: false,
   arrowKeys: true,
   mouseDrag: true,
