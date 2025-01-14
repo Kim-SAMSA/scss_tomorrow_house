@@ -1,4 +1,5 @@
 @use '../constants/colors' as *;
+@use '../constants/dimensions' as *;
 
 @use '../mixins/text-style' as *;
 @use '../mixins/flexbox' as *;
@@ -8,6 +9,7 @@
 .global-footer {
   padding-top: 32px;
   padding-bottom: 40px;
+  margin-bottom: $order-cta-height;
   background-color: $background;
 
   &-title {
@@ -53,6 +55,8 @@
   }
 
   @include responsive(D) {
+    margin-bottom: 0;
+
     &-title {
       @include text-style(14);
     }
