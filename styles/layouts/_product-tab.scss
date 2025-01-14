@@ -15,7 +15,7 @@
   top: ($gnb-height-sm + $lnb-height-sm) - 2px;
   z-index: $product-tab-level;
   width: 100%;
-  height: 40px;
+  height: $product-tab-height-sm;
   border-bottom: 1px solid $border;
   background-color: $white;
 
@@ -58,7 +58,7 @@
 
   @include responsive(T) {
     top: ($lnb-height-md + $gnb-height-md) - 2px;
-    height: 54px;
+    height: $product-tab-height-md;
     margin: 40px 0;
     background-color: $background;
     border-bottom: 0;
