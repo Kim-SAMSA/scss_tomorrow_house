@@ -1,0 +1,56 @@
+@use '../constants/colors' as *;
+@use '../constants/z-indexes' as *;
+@use '../constants/dimensions' as *;
+
+@use '../mixins/flexbox' as *;
+@use '../mixins/positions' as *;
+@use '../mixins/text-style' as *;
+@use '../mixins/responsive' as *;
+
+.order-form-modal {
+  position: fixed;
+  z-index: $order-form-modal-level;
+  display: none;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  background-color: $white;
+  border-radius: 12px 12px 0 0;
+  padding-top: 16px;
+  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.15);
+
+  &.is-open {
+    display: block;
+    animation-name: modal-fade-in;
+    animation-duration: 300ms;
+  }
+
+  .order-input {
+    margin-bottom: 8px;
+  }
+
+  .order-checkout,
+  .order-summary {
+    margin-bottom: 16px;
+  }
+
+  .button-group {
+    padding: 4px;
+    padding-top: 0;
+  }
+
+  @include responsive(T) {
+    padding-top: 32px;
+  }
+}
+
+@keyframes modal-fade-in {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
