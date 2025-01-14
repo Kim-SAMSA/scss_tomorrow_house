@@ -1,13 +1,22 @@
 @use '../constants/colors' as *;
+@use '../constants/dimensions' as *;
 
 @use '../mixins/text-style' as *;
 @use '../mixins/flexbox' as *;
 @use '../mixins/scrollbar' as *;
 
-.floating-oreder-form {
-  @include column-flexbox(start, start);
+@use 'sass:math';
 
-  height: 700px; //   temp
+.floating-oreder-form {
+  $global-header-height: $gnb-height-md + $lnb-height-md +
+    $product-tab-height-md;
+
+  @include column-flexbox(start, start);
+  position: sticky;
+  top: $gnb-height-md + $lnb-height-md + $product-tab-height-md;
+  min-height: calc(100vh - ($global-header-height + $global-footer));
+  max-height: calc(100vh - $global-header-height);
+  padding: 24px 0;
 
   > * {
     width: 100%;
