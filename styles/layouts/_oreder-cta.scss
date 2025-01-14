@@ -1,0 +1,47 @@
+@use '../constants/colors' as *;
+@use '../constants/dimensions' as *;
+@use '../constants/z-indexes' as *;
+
+@use '../mixins/positions' as *;
+@use '../mixins/flexbox' as *;
+@use '../mixins/responsive' as *;
+@use '../mixins/text-style' as *;
+
+.order-cta {
+  @include flexbox;
+  position: relative;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: $order-cta-level;
+  width: 100%;
+  height: $order-cta-height;
+  background-color: $white;
+  padding: 4px;
+
+  .btn-ghost {
+    flex-direction: column;
+    width: 72px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: 4px;
+
+    i {
+      color: $primary;
+      font-size: 24px;
+    }
+
+    span {
+      color: $secondary;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: -0.05em;
+      line-height: 16px;
+    }
+  }
+
+  .btn-primary {
+    flex-grow: 1;
+  }
+}
