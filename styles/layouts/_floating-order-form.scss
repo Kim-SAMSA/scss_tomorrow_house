@@ -1,0 +1,56 @@
+@use '../constants/colors' as *;
+
+@use '../mixins/text-style' as *;
+@use '../mixins/flexbox' as *;
+@use '../mixins/scrollbar' as *;
+
+.floating-oreder-form {
+  @include column-flexbox(start, start);
+
+  height: 700px; //   temp
+
+  > * {
+    width: 100%;
+  }
+
+  .order-input,
+  .order-summary,
+  .button-group {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .order-checkout {
+    @include no-scrollbar;
+
+    flex-grow: 1;
+    overflow: auto;
+  }
+
+  .button-group {
+    .bookmark-button {
+      flex-shrink: 0;
+      flex-grow: 0;
+      width: 55px;
+      height: 55px;
+      border: 1px solid $border;
+      border-radius: 4px;
+      transition: background-color 200ms ease-in-out;
+
+      &.is-active {
+        i {
+          color: $blue;
+        }
+      }
+
+      i {
+        font-size: 32px;
+        color: $primary;
+      }
+
+      &:hover {
+        background-color: $background;
+      }
+    }
+  }
+}
