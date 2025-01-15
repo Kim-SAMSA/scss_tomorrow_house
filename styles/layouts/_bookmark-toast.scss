@@ -1,0 +1,55 @@
+@use '../constants/colors' as *;
+@use '../constants/z-indexes' as *;
+@use '../constants/box-shadows' as *;
+@use '../constants/grid' as *;
+
+@use '../mixins/text-style' as *;
+@use '../mixins/flexbox' as *;
+@use '../mixins/positions' as *;
+
+.bookmark-toast {
+  $close-button-size: 36px;
+
+  @include flexbox(between);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: $bookmark-toast-level;
+
+  width: 100%;
+  max-width: 480px;
+  height: 56px;
+  padding-left: $close-button-size;
+  padding-right: $grid-margin;
+  background-color: $white;
+  box-shadow: $popup-reversed-shadow;
+
+  .bookmark-title {
+    @include text-style(13, $primary);
+
+    font-weight: 400;
+    margin-right: 16px;
+  }
+
+  .close-button {
+    @include inline-flexbox;
+    @include pos-center-y;
+    left: 0;
+    width: $close-button-size;
+    height: $close-button-size;
+    font-size: 20px;
+    color: $tertiary;
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  .button-group {
+    @include flexbox(end);
+
+    a {
+      margin-right: 4px;
+    }
+  }
+}
