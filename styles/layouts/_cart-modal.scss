@@ -14,7 +14,7 @@
 
   display: none;
 
-  z-index: $cart-midal-level;
+  z-index: $cart-modal-level;
   width: calc(100% - ($grid-margin * 2));
   max-width: 360px;
   background-color: $white;
