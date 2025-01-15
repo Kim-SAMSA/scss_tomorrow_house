@@ -6,6 +6,9 @@
 @use '../mixins/text-style' as *;
 @use '../mixins/flexbox' as *;
 @use '../mixins/positions' as *;
+@use '../mixins/responsive' as *;
+
+@use 'sass:math';
 
 .bookmark-toast {
   $close-button-size: 36px;
@@ -19,10 +22,15 @@
   width: 100%;
   max-width: 480px;
   height: 56px;
+  display: none;
   padding-left: $close-button-size;
   padding-right: $grid-margin;
   background-color: $white;
   box-shadow: $popup-reversed-shadow;
+
+  &.is-active {
+    display: flex;
+  }
 
   .bookmark-title {
     @include text-style(13, $primary);
@@ -50,6 +58,35 @@
 
     a {
       margin-right: 4px;
+    }
+  }
+
+  @include responsive(D) {
+    @include pos-center-x(fixed);
+    bottom: 40px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-left: 56px;
+    padding-right: 20px;
+    box-shadow: $popup-shadow;
+    .bookmark-title {
+      @include text-style(16);
+    }
+
+    .close-button {
+      left: math.div((56px - $close-button-size), 2);
+      font-size: 24px;
+
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+
+    .button-group {
+      a {
+        margin-right: 8px;
+      }
     }
   }
 }
