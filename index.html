@@ -2497,26 +2497,28 @@
                   </li>
                 </ul>
               </div>
+
+              <dl class="order-summary">
+                <dt>주문금액</dt>
+                <dd>
+                  <output
+                    for="oreder-form-modal-select-1 oreder-form-modal-select-2"
+                  >
+                    <div class="price-20">
+                      <strong class="amount">0</strong>
+                      <span class="currency">원</span>
+                    </div>
+                  </output>
+                </dd>
+              </dl>
             </div>
           </div>
         </div>
 
-        <dl class="order-summary">
-          <dt>주문금액</dt>
-          <dd>
-            <output for="oreder-form-modal-select-1 oreder-form-modal-select-2">
-              <div class="price-20">
-                <strong class="amount">0</strong>
-                <span class="currency">원</span>
-              </div>
-            </output>
-          </dd>
-        </dl>
-
         <div class="button-group">
           <button class="btn-secondary btn-48" type="button">장바구니</button>
 
-          <button class="btn-primary btn-548" type="submit">구매하기</button>
+          <button class="btn-primary btn-48" type="submit">구매하기</button>
         </div>
       </form>
     </aside>
@@ -2541,7 +2543,7 @@
       </div>
     </aside>
 
-    <!-- NOTE: 북마크에서서 삭제했을 때 -->
+    <!-- NOTE: 북마크에서 삭제했을 때 -->
 
     <!-- <aside class="bookmark-toast">
       <h1 class="bookmark-title">스크랩북에서 삭제했습니다</h1>
@@ -2557,7 +2559,7 @@
     <script src="./JS/sidebar.js"></script>
     <script src="/JS/sidebar-drawer.js"></script>
     <script src="./JS/section-header.js"></script>
-
     <script src="./JS/search-modal.js"></script>
+    <script src="./JS/order-cta.js"></script>
   </body>
 </html>
