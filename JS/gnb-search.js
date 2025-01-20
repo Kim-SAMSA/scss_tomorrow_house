@@ -7,10 +7,18 @@ const deleteAllButton = gnbSearchHistory.querySelector(
   '.search-history-header button'
 )
 
+const deleteButtonList = gnbSearchHistoryList.querySelectorAll('.delete-button')
+
+function closeGnbSearchHistory() {
+  gnbSearchHistory.classList.remove('is-active')
+  window.removeEventListener('click', closeGnbSearchHistoryOnClick)
+}
+
+// ===========================
+
 function closeGnbSearchHistoryOnClick(e) {
   if (!gnbSearch.contains(e.target)) {
-    gnbSearchHistory.classList.remove('is-active')
-    window.removeEventListener('click', closeGnbSearchHistoryOnClick)
+    closeGnbSearchHistory()
   }
 }
 
@@ -27,10 +35,26 @@ function openGnbSearchHistory() {
 
 gnbSearchInput.addEventListener('focus', openGnbSearchHistory)
 
+///=====================================
+
 function deleteAllHistoryItems() {
   // gnb-search-list 안에 있는 모든 li를 삭제
   gnbSearchHistoryList.innerHTML = ''
-  gnbSearchHistory.classList.remove('is-active')
+  closeGnbSearchHistory()
 }
 
 deleteAllButton.addEventListener('click', deleteAllHistoryItems)
+
+function deleteSearchHistoryItem(e) {
+  e.stopPropagation()
+  const itemToDelete = this.parentNode
+  gnbSearchHistoryList.removeChild(itemToDelete)
+
+  if (gnbSearchHistoryList.children.length === 0) {
+    closeGnbSearchHistory()
+  }
+}
+
+deleteButtonList.forEach((button) => {
+  button.addEventListener('click', deleteSearchHistoryItem)
+})
